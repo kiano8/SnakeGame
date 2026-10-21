@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skeleton Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1 class="title">💀 SKELETON SNAKE 💀</h1>
+            <div class="stats">
+                <div class="stat">Score: <span id="score">0</span></div>
+                <div class="stat">Level: <span id="level">1</span></div>
+                <div class="stat">Obstacles: <span id="obstacles">0</span></div>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas" width="480" height="480"></canvas>
+        
+        <div class="controls">
+            <p>🎮 Use ARROW KEYS or WASD to move</p>
+            <p>P for PAUSE and RESUME</p>
+            <p>R RESTARTING the game</p>
+            <p>💀 Eat skulls to grow • Avoid walls and obstacles</p>
+
+        </div>
+    </div>
+
+    <div class="start-screen" id="startScreen">
+        <h2>🦴 Welcome to Skeleton Snake 🦴</h2>
+        <p style="margin: 15px 0; color: #c4b5fd;">Guide the skeleton snake to eat skulls and grow longer!</p>
+        <p style="margin: 15px 0; color: #fbbf24;">⚠️ Each level adds more obstacles!</p>
+        <button class="start-btn" onclick="startGame()">START GAME</button>
+    </div>
+
+    <div class="game-over" id="gameOver">
+        <h2>💀 GAME OVER 💀</h2>
+        <p>Your skeleton has crumbled...</p>
+        <p>Final Score: <span id="finalScore">0</span></p>
+        <p>Level Reached: <span id="finalLevel">1</span></p>
+        <button class="restart-btn" onclick="restartGame()">RESURRECT</button>
+    </div>
+
+   <script src="game.js"></script>
+
+</body>
+</html>

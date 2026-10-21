@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1a0033, #2d0a4f, #1a0033);
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    color: #fff;
+}
+
+.game-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    border: 3px solid #8b5cf6;
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+}
+
+.game-header {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 2.5em;
+    color: #8b5cf6;
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.8);
+    margin-bottom: 10px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px rgba(139, 92, 246, 0.8); }
+    to { text-shadow: 0 0 20px rgba(139, 92, 246, 1), 0 0 30px rgba(139, 92, 246, 0.8); }
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.stat {
+    color: #a855f7;
+    font-weight: bold;
+}
+
+canvas {
+    border: 2px solid #6366f1;
+    background: radial-gradient(circle at center, #0f0f23, #1a1a3e);
+    border-radius: 10px;
+    box-shadow: inset 0 0 30px rgba(99, 102, 241, 0.3);
+}
+
+.controls {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #c4b5fd;
+}
+
+.game-over, .start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.7);
+    padding: 30px;
+}
+
+.game-over {
+    border: 2px solid #ef4444;
+    display: none;
+}
+
+.game-over h2 {
+    color: #ef4444;
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.8);
+}
+
+.restart-btn {
+    background: linear-gradient(45deg, #8b5cf6, #a855f7);
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.restart-btn:hover {
+    background: linear-gradient(45deg, #7c3aed, #9333ea);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+}
+
+.start-screen {
+    border: 2px solid #8b5cf6;
+    padding: 40px;
+}
+
+.start-btn {
+    background: linear-gradient(45deg, #10b981, #059669);
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 1.3em;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.start-btn:hover {
+    background: linear-gradient(45deg, #059669, #047857);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+}
